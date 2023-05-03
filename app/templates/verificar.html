@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2 class="text-center">Dados do Aluno</h2>
+<table class="table">
+    <tr>
+        <td>Nome</td>
+        <td>{{ aluno['nome'] }}</td>
+    </tr>
+    <tr>
+        <td>Número</td>
+        <td>{{ aluno['id'] }}</td>
+    </tr>
+    <tr>
+        <td>Curso</td>
+        <td>{{ aluno['curso'] }}</td>
+    </tr>
+    <tr>
+        <td>Nível</td>
+        <td>{{ aluno['nivel'] }}</td>
+    </tr>
+    <tr>
+        <td>Validade</td>
+        <td>{{ validade }}</td>
+    </tr>
+</table>
+{% endblock %}

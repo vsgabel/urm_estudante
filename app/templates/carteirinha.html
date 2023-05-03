@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="card mt-3" style="width: 24rem; border-radius: 14px;">
+    <div class="card-title text-center">
+        <h4>Universidade Roberto Miranda</h4>
+    </div>
+    <div class="card-body">
+        <div class="row pd-1">
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-6">
+                        Nome:
+                    </div>
+                    <div class="col-md-6">
+                        {{ aluno['nome'] }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        Número:
+                    </div>
+                    <div class="col-md-6">
+                        {{ aluno['id'] }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        Curso:
+                    </div>
+                    <div class="col-md-6">
+                        {{ aluno['curso'] }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        Nível:
+                    </div>
+                    <div class="col-md-6">
+                        {{ aluno['nivel'] }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="row text-center">
+                    <img src="{{url_for('static', filename='img/'+aluno['id']|string+'.png')}}"
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
